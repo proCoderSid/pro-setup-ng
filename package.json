@@ -2,14 +2,17 @@
   "name": "pro-setup-ng",
   "version": "0.0.0",
   "scripts": {
-    "prepare": "npm i @angular/cli@16.2.0 npkill prettier lint-staged husky npm-run-all pm2 -g && husky install",
+    "prepare": "npm i @angular/cli@16.2.0 npkill prettier lint-staged husky npm-run-all pm2 @compodoc/compodoc@1.1.21 -g && husky install",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "posttest": "npm run format",
-    "format": "prettier --log-level log --write \"**/*.{html,css,scss,less,js,jsx,ts,tsx,json,md,mdx,yaml}\" --config .prettierrc"
+    "format": "prettier --log-level log --write \"**/*.{html,css,scss,less,js,jsx,ts,tsx,json,md,mdx,yaml}\" --config .prettierrc",
+    "compodoc:build": "compodoc -p tsconfig.doc.json -d dist/docs -n ProCoderSid --theme Vagrant --hideGenerator",
+    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
+    "compodoc:serve": "compodoc -s"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +32,8 @@
     "@angular-devkit/build-angular": "^16.2.6",
     "@angular/cli": "^16.2.6",
     "@angular/compiler-cli": "^16.2.0",
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
+    "@compodoc/compodoc": "^1.1.21",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
