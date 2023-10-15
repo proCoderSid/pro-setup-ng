@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* PrimeNG */
+@import 'primeng/resources/primeng.min.css';
+
+/* Primeflex */
+$gutter: 1rem;
+$xm: 350px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+$breakpoints: (
+  'xm': $xm,
+  'sm': $sm,
+  'md': $md,
+  'lg': $lg,
+  'xl': $xl,
+  'xxl': $xxl
+);
+@import 'primeflex/primeflex.scss';
+
+/* Quill Text Editor for p-editor */
+@import 'quill/dist/quill.core.css';
+@import 'quill/dist/quill.snow.css';
+
+/* Icons */
+@import 'primeicons/primeicons.css';
+@import 'material-icons/iconfont/material-icons.css';

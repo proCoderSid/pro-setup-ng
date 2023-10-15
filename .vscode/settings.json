@@ -2,6 +2,7 @@
   "cSpell.words": [
     "compodoc",
     "devkit",
+    "iconfont",
     "ngsw",
     "npkill",
     "Parens",
@@ -11,6 +12,9 @@
     "prestage",
     "prestart",
     "prewatch",
+    "primeflex",
+    "primeicons",
+    "primeng",
     "remarkrc"
   ],
   "editor.formatOnSave": true
