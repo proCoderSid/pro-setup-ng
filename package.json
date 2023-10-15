@@ -2,7 +2,7 @@
   "name": "pro-setup-ng",
   "version": "0.0.0",
   "scripts": {
-    "prepare": "npm i @angular/cli@16.2.0 npkill prettier lint-staged husky npm-run-all pm2 @compodoc/compodoc@1.1.21 -g && husky install",
+    "prepare": "npm i @angular/cli@16.2.0 npkill prettier lint-staged husky npm-run-all pm2 jscpd @compodoc/compodoc@1.1.21 -g && husky install",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -12,7 +12,8 @@
     "format": "prettier --log-level log --write \"**/*.{html,css,scss,less,js,jsx,ts,tsx,json,md,mdx,yaml}\" --config .prettierrc",
     "compodoc:build": "compodoc -p tsconfig.doc.json -d dist/docs -n ProCoderSid --theme Vagrant --hideGenerator",
     "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
-    "compodoc:serve": "compodoc -s"
+    "compodoc:serve": "compodoc -s",
+    "duplicate": "jscpd src --min-tokens=100"
   },
   "private": true,
   "dependencies": {

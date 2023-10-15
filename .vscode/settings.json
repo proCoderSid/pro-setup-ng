@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["compodoc", "devkit", "npkill", "Parens", "posttest", "remarkrc"]
+  "cSpell.words": ["compodoc", "devkit", "npkill", "Parens", "posttest", "remarkrc"],
+  "editor.formatOnSave": true
 }
