@@ -1,4 +1,17 @@
 {
-  "cSpell.words": ["compodoc", "devkit", "npkill", "Parens", "posttest", "remarkrc"],
+  "cSpell.words": [
+    "compodoc",
+    "devkit",
+    "ngsw",
+    "npkill",
+    "Parens",
+    "posttest",
+    "preprod",
+    "preqa",
+    "prestage",
+    "prestart",
+    "prewatch",
+    "remarkrc"
+  ],
   "editor.formatOnSave": true
 }

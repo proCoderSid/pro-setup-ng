@@ -45,13 +45,61 @@
               ],
               "outputHashing": "all"
             },
+            "stage": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.stage.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "qa": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -60,10 +108,25 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pro-setup-ng:build:production"
+              "browserTarget": "pro-setup-ng:build:production",
+              "open": true
+            },
+            "stage": {
+              "browserTarget": "pro-setup-ng:build:stage",
+              "open": true
+            },
+            "qa": {
+              "browserTarget": "pro-setup-ng:build:qa",
+              "forceEsbuild": true,
+              "open": true,
+              "disableHostCheck": true
             },
             "development": {
-              "browserTarget": "pro-setup-ng:build:development"
+              "browserTarget": "pro-setup-ng:build:development",
+              "forceEsbuild": true,
+              "open": true,
+              "disableHostCheck": true,
+              "hmr": true
             }
           },
           "defaultConfiguration": "development"
